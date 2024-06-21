@@ -35,5 +35,23 @@ int main(int argc, char const *argv[])
 
     printf("The sum is: %d", sum);
 
+    // nested loop
+
+    int i;
+    int j;
+
+    printf("\nEnter # of rows: ");
+    scanf("%d", &i);
+    printf("\nEnter # of cols: ");
+    scanf("%d", &j);
+
+    for(int row=1; row<=i; row++){
+        for(int col=1; col<=j; col++){
+            printf("%d\t", col);
+        }
+        printf("\n");
+    };
+
+
     return 0;
 }
