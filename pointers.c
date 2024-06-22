@@ -6,7 +6,7 @@ int main(int argc, char const *argv[])
   char *pSym = &sym;
 
   printf("\nThe address: %p", pSym);
-  printf("\nThe value: %c", sym);
+  printf("\nThe value: %c", *pSym); // dereferencing!!
   
   return 0;
 }
