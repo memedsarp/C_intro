@@ -3,7 +3,7 @@
 #include <time.h>
 #include <stdbool.h>
 
-bool randomNum(int pickNum, int hiddenNum, bool correct, int maxNum);
+bool randomNum(int pickNum, int hiddenNum, bool correct);
 
 int main(int argc, char const *argv[])
 {
@@ -27,14 +27,14 @@ int main(int argc, char const *argv[])
         int pickNum;
         printf("\nPick a number between 0 and %d: ", maxNum);
         scanf("%d", &pickNum);
-        correct = randomNum(pickNum, hiddenNum, correct, maxNum);
+        correct = randomNum(pickNum, hiddenNum, correct);
     }
     while(!correct);
 
     return 0;
 }
 
-bool randomNum(int pickNum, int hiddenNum, bool correct, int maxNum)
+bool randomNum(int pickNum, int hiddenNum, bool correct)
 {
     if (pickNum == hiddenNum)
     {
